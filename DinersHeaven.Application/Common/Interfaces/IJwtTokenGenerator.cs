@@ -1,7 +1,9 @@
-﻿namespace DinersHeaven.Application.Common.Interfaces
+﻿using DinersHeaven.Domain.Entities;
+
+namespace DinersHeaven.Application.Common.Interfaces
 {
     public interface IJwtTokenGenerator
     {
-        string GenerateToken(Guid userId, string firstName, string lastName);
+        string GenerateToken(User user);
     }
 }

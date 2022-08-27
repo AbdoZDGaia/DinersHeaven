@@ -1,6 +1,8 @@
 ﻿using DinersHeaven.Application.Common.Interfaces;
 using DinersHeaven.Application.Common.Interfaces.Services;
+using DinersHeaven.Application.Common.Persistence;
 using DinersHeaven.Infrastructure.Authentication;
+using DinersHeaven.Infrastructure.Persistence;
 using DinersHeaven.Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,6 +18,7 @@ namespace DinersHeaven.Infrastructure
 
             services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
             services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
+            services.AddScoped<IUserRepository, UserRepository>();
             return services;
         }
     }
