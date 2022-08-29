@@ -1,4 +1,5 @@
-﻿using DinersHeaven.Application.Services.Authentication;
+﻿using DinersHeaven.Api.Filters;
+using DinersHeaven.Application.Services.Authentication;
 using DinersHeaven.Contracts.Authentication;
 using Microsoft.AspNetCore.Mvc;
 
